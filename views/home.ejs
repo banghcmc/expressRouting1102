@@ -20,8 +20,10 @@
         <li><%= e %></li>
       <% }) %>
     </ul>
-    
-    <a href="#">Quan tri</a>
-
+    <%
+      if(isAdmin === true){
+        %> <a href="#">Quan tri</a> <%
+      }
+    %>
   </body>
 </html>

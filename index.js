@@ -26,12 +26,8 @@ app.get('/', (req, res) => res.send('Hello'));
 //   res.send('Dang ky thanh cong');
 // });
 
-app.get('/tinh', (req, res) => {
-  res.render('home', {
-    mang: ['Android', 'iOS', 'Node'],
-    isAdmin: true
- });
-});
+
+app.get('/tinh', require('./controllers/xuLyTinh.js'));
 
 app.post('/xuly', parser, (req, res) => {
   let {pheptinh, soa, sob} = req.body;

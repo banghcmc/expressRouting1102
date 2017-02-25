@@ -3,6 +3,8 @@ let app = express();
 let PhepTinh = require('./PhepTinh.js');
 let parser = require('body-parser').urlencoded({extended: false});
 
+app.use('/s',express.static('public'));
+
 app.set('view engine', 'ejs');
 app.set('views', './views');
 

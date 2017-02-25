@@ -1,3 +1,4 @@
+<% let a = 5 %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,7 +6,6 @@
     <title></title>
   </head>
   <body>
-    <%= name + ' Hello' + age %>
     <form action="/xuly" method="post">
       <input type="text" name="pheptinh" placeholder="Phep Tinh">
       <br><br>
@@ -15,5 +15,13 @@
       <br><br>
       <input type="submit" value="Tinh">
     </form>
+    <ul>
+      <% mang.forEach( e => {%>
+        <li><%= e %></li>
+      <% }) %>
+    </ul>
+    
+    <a href="#">Quan tri</a>
+
   </body>
 </html>

@@ -27,7 +27,10 @@ app.get('/', (req, res) => res.send('Hello'));
 // });
 
 app.get('/tinh', (req, res) => {
-  res.render('home', {name: 'Pho', age: 17});
+  res.render('home', {
+    mang: ['Android', 'iOS', 'Node'],
+    isAdmin: true
+ });
 });
 
 app.post('/xuly', parser, (req, res) => {

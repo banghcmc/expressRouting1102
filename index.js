@@ -26,11 +26,6 @@ app.get('/', (req, res) => res.send('Hello'));
 //   res.send('Dang ky thanh cong');
 // });
 
-
 app.get('/tinh', require('./controllers/xuLyTinh.js'));
 
-app.post('/xuly', parser, (req, res) => {
-  let {pheptinh, soa, sob} = req.body;
-  let pt = new PhepTinh(pheptinh, soa, sob);
-  res.send(pt.getResult());
-});
+app.post('/xuly', parser, require('./controllers/xuly.js'));
